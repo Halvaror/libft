@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/31 15:52:35 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/08/21 19:51:43 by alopez-b         ###   ########.fr       */
+/*   Created: 2021/08/21 21:55:03 by alopez-b          #+#    #+#             */
+/*   Updated: 2021/08/21 21:56:52 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char *ft_strjoin(char consts1, char const *s2)
 {
-	size_t	a;
-
-	a = 0;
-	while (s[a])
-	{
-		a++;
-	}
-	return (a);
+	
 }

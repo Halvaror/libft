@@ -126,31 +126,13 @@
   return 0;
 }*/
 
-////STRCHR & STRRCHR & MEMCHR////
-/*int main () 
-{
-	char str[] = "http://www.tutorialspoint.com";
-	char ch = '0';
-	printf("String after %c is %s\n", ch, ft_strrchr(str, ch));
-   
-   return(0);
-}*/
-/*int main () 
-{
-	const	char str[] = "http://www.tutorialspoint.com";
-	const	char ch = '.';
-	printf("String after %c is %s\n", ch, memchr(str, ch, 30));
-   
-   return(0);
-}*/
+////STRNSTR////
 
-////STRNCMP & MEMCMP////
 /*int main()
 {
-	char s1[]= "hola mundo";
-	char s2[]= "hola mun";
+	char big[]="hola que tal mundo";
+	char little[]="a";
 
-	printf("originl: %d\n", memcmp(s1,s2, 4));
-	printf("funcion: %d\n", ft_memcmp(s1,s2, 4));
-	
+	printf("original: %s\n", strstr(big, little));
+	printf("funcion : %s\n", ft_strnstr(big, little, 2));
 }*/

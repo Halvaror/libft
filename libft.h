@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 20:57:30 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/08/21 17:13:46 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/08/21 17:47:36 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ char			*ft_strrchr(const char *s, int c);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 void			*ft_memchr(const void *str, int c, size_t n);
 int				ft_memcmp(const void *str1, const void *str2, size_t n);
-int				ft_atoi(const char *str)
+char			*ft_strnstr(const char *big, const char *little, size_t len);
+int				ft_atoi(const char *str);
 #endif

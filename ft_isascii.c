@@ -6,13 +6,13 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/31 15:23:49 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/08/21 19:44:39 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/08/22 19:53:58 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 0177)
 		return (1);

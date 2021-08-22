@@ -6,11 +6,11 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 21:35:01 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/07/10 21:14:39 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/08/22 18:50:42 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(char *str)
+static unsigned int	ft_strlen(char *str)
 {
 	unsigned int	length;
 

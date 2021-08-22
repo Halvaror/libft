@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 16:36:52 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/08/21 17:13:03 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/08/22 19:58:55 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	signe;
-	int	result;
+	int			i;
+	int			signe;
+	long long	result;
 
 	i = 0;
 	signe = 1;

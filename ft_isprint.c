@@ -6,13 +6,13 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/31 15:31:31 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/07/31 15:51:10 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/08/22 19:53:43 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	if ((c >= 32 && c <= 126))
 		return (1);

@@ -1,5 +1,24 @@
 #include "libft.h"
 
+
+////ISALPHA////
+
+/*int main()
+{
+  int a;
+
+  a = -1;
+  while (a < 530)
+  {
+	printf ("numero: %d ", a);
+    printf("funcion: %d ", isalpha(a));
+	printf("replica: %d\n", ft_isalpha(a));
+	a++;
+  }
+
+  return 0;
+}*/
+
 ////ISALNUM////
 /*int main()
 {
@@ -135,4 +154,24 @@
 
 	printf("original: %s\n", strstr(big, little));
 	printf("funcion : %s\n", ft_strnstr(big, little, 2));
+}*/
+
+////STRDUP////
+
+/*int main()
+{
+	const char s1[]="hola mundo";
+	size_t	i;
+
+	i = ft_strlen(s1);
+	printf("original: %s \n", strdup(s1));
+	printf("original: %s \n", ft_strdup(s1));
+}*/
+
+////SUBSTR////
+/*int	main()
+{
+	const char s1[]="hola";
+
+	printf("funcion: %s\n", ft_substr(s1, 7, 4));
 }*/

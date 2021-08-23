@@ -20,18 +20,3 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
-int main()
-{
-  int a;
-
-  a = -1;
-  while (a < 530)
-  {
-	printf ("numero: %d ", a);
-    printf("funcion: %d ", isalpha(a));
-	printf("replica: %d\n", ft_isalpha(a));
-	a++;
-  }
-
-  return 0;
-}

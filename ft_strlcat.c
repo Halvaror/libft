@@ -6,11 +6,13 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 21:35:01 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/08/22 18:50:42 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/08/23 21:14:38 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static unsigned int	ft_strlen(char *str)
+#include "libft.h"
+
+static unsigned int	ft_strlenn(char *str)
 {
 	unsigned int	length;
 
@@ -23,7 +25,7 @@ static unsigned int	ft_strlen(char *str)
 	return (length);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	unsigned int	a;
 	unsigned int	b;
@@ -31,8 +33,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	a = 0;
 	b = 0;
 	if (size <= ft_strlen(dest))
-		return (size + ft_strlen(src));
-	a = ft_strlen(dest);
+		return (size + ft_strlenn(src));
+	a = ft_strlenn(dest);
 	b = 0;
 	while (src[b] != '\0' && a + 1 < size)
 	{
@@ -41,5 +43,5 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		a++;
 	}
 	dest[a] = '\0';
-	return (ft_strlen(dest) + ft_strlen(&src[b]));
+	return (ft_strlenn(dest) + ft_strlenn(&src[b]));
 }

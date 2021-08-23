@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 20:57:30 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/08/23 20:20:59 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/08/23 21:31:33 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
-size_t				ft_strlen(const char *str);
+size_t			ft_strlen(const char *str);
 void			*ft_memset(void *str, int c, size_t n);
 void			*ft_bzero(void *str, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
@@ -40,4 +40,7 @@ void			*ft_memchr(const void *str, int c, size_t n);
 int				ft_memcmp(const void *str1, const void *str2, size_t n);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
 int				ft_atoi(const char *str);
+void			*ft_calloc(size_t count, size_t size);
+char			*ft_strdup(const char *s1);
+
 #endif

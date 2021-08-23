@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 17:54:22 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/08/22 20:27:41 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/08/23 21:29:01 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int	*ptr;
+	size_t	*ptr;
 
 	if (count == 0 || size == 0)
 	{

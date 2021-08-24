@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/07 21:23:54 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/08/22 21:23:27 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/08/24 17:56:47 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (c == (int)s[i])
+		if ((char)c == s[i])
 			return ((char *)&s[i]);
 		else
 			i++;

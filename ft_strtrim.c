@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 20:34:27 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/08/24 21:03:10 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/08/27 14:10:01 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,18 @@
 char *ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	size_t	i;
-	size_t	j;
+	size_t	start;
 
-	i = 0;
-	j = 0;
-	str = malloc (sizeof(char) * (ft_strlen(s1) + 1));
-	if (!str)
+	start = 0;
+	if (!s1 || !set)
 		return (NULL);
-	while (s1[i] != '\0')
-	{
-		printf("i: %zu", i);
-		printf("j: %zu\n", j);
-		if (s1[i] == set[j])
-			i++;
-		if (j >= ft_strlen(set))
-			j = 0;
-		else
-			j++;
-	}
+	if (ft_strlen(set) == 0)
+		return ((char *)s1);
+	while (*s1 && ft_strchr(set, *s1))
+			s1++;
+	start = ft_strlen(s1);
+	while (start && ft_strchr(set, s1[start]))
+			start--;
+	str = ft_substr(s1, 0, start + 1);
 	return (str);
 }
-	int	main()
-	{
-		printf("%s\n", ft_strtrim("    hola mundo", " "));
-	}

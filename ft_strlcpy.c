@@ -19,12 +19,14 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	i = ft_strlen(src);
 	if (dest == NULL || src == NULL)
 		return(0);
-	if (i + 1 < size)
+	if (i + 1 < size && size != 0)
 		ft_memcpy(dest, src, i + 1);
-	else if ( size != 0)
+	else if (size != 0)
 	{
 		ft_memcpy(dest, src, size - 1);
 		dest[size - 1] = '\0';
 	}
+	else if (size == 0)
+		dest = 0;
 	return(i);
 }

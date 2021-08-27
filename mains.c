@@ -149,11 +149,8 @@
 
 /*int main()
 {
-	char big[]="hola que tal mundo";
-	char little[]="a";
-
-	printf("original: %s\n", strstr(big, little));
-	printf("funcion : %s\n", ft_strnstr(big, little, 2));
+	printf("original: %s\n", strnstr("aaabcabcd", "abcd", 9));
+	printf("funcion : %s\n", ft_strnstr("aaabcabcd", "abcd", 9));
 }*/
 
 ////STRDUP////

@@ -153,6 +153,20 @@
 	printf("funcion : %s\n", ft_strnstr("aaabcabcd", "abcd", 9));
 }*/
 
+////STRTRIM////
+
+/*#if DEBUG
+int main(int argc, char **argv)
+{
+	(void)argc;
+
+	char *ret;
+
+	printf("funcion : %s\n", (ret = ft_strtrim(argv[1], argv[2])));
+	free(ret);
+} //usando -DDEBUG=1
+#
+endif*/
 ////STRDUP////
 
 /*int main()
@@ -171,4 +185,11 @@
 	const char s1[]="hola";
 
 	printf("funcion: %s\n", ft_substr(s1, 7, 4));
+}*/
+/*int	main()
+{
+	const char s1[]="tripouille";
+
+	//system("leaks a.out\n");
+	printf("funcion: %s\n", ft_substr(s1, 0, 42000000));
 }*/

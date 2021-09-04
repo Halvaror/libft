@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 20:34:27 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/09/02 22:06:25 by alopez-b         ###   ########.fr       */
+/*   Created: 2021/09/04 19:28:20 by alopez-b          #+#    #+#             */
+/*   Updated: 2021/09/04 19:34:25 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+void ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-	size_t	start;
+	unsigned int	res;
 
-	start = 0;
-	if (!s1)
-		return (NULL);
-	if (ft_strlen(set) == 0)
-		return (ft_strdup(s1));
-	while (*s1 && ft_strchr(set, *s1))
-			s1++;
-	start = ft_strlen(s1);
-	while (start && ft_strchr(set, s1[start]))
-			start--;
-	str = ft_substr(s1, 0, start + 1);
-	return (str);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		res = (unsigned int)(n * -1);
+	}
+	else
+		res = (unsigned int)n;
+	if (res >= 10)
+		ft_putnbr_fd(res / 10, fd);
+	ft_putchar_fd((char)(res % 10 + 48), fd);
 }

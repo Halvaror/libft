@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:34:56 by alopezb           #+#    #+#             */
-/*   Updated: 2021/08/25 17:02:33 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/09/02 22:46:13 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				i++;
 				j++;
 			}
+			i = i - j;
+			i++;
 		}
 		else
 			i++;
@@ -41,8 +43,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*int main()
+/*#if DEBUG
+int main()
 {
-	printf("original: %s\n", strnstr("MZIRIBMZIRIBMZE123", "MZIRIBMZE", 9));
-	printf("funcion : %s\n", ft_strnstr("MZIRIBMZIRIBMZE123", "MZIRIBMZE", 9));
-}*/
+	printf("original: %s\n", strnstr("aaabcabcd", "aaabc", 5));
+	printf("funcion : %s\n", ft_strnstr("aaabcabcd", "aaabc", 5));
+}
+#endif*/

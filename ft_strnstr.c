@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:34:56 by alopezb           #+#    #+#             */
-/*   Updated: 2021/09/02 22:46:13 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/09/06 20:43:55 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,36 +17,29 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
-	j = 0;
 	i = 0;
+	j = 0;
 	if (len < 0)
 		len = ft_strlen(big);
 	if (little[i] == '\0' || big == little)
 		return ((char *)&big[i]);
 	while ((little[j] != '\0') && (big[i] != '\0') && (i < len))
 	{
-		if (little[j] == big[i])
+		j = 0;
+		while (little[j] == big[i + j] && ((i + j) < len))
 		{
-			while (little[j] == big[i] && (i < len))
-			{
-				if ((little[j] == big[i]) && (little[j + 1] == '\0') && (j + 1 < len))
-					return ((char *)&big[i - j]);
-				i++;
-				j++;
-			}
-			i = i - j;
-			i++;
+			if (little[j + 1] == '\0')
+				return ((char *)big + i);
+			j++;
 		}
-		else
-			i++;
-			j = 0;
+		i++;
 	}
 	return (NULL);
 }
-/*#if DEBUG
+#if DEBUG
 int main()
 {
 	printf("original: %s\n", strnstr("aaabcabcd", "aaabc", 5));
 	printf("funcion : %s\n", ft_strnstr("aaabcabcd", "aaabc", 5));
 }
-#endif*/
+#endif

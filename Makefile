@@ -6,7 +6,7 @@
 #    By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/21 22:05:02 by alopez-b          #+#    #+#              #
-#    Updated: 2021/09/06 20:34:09 by alopez-b         ###   ########.fr        #
+#    Updated: 2021/09/09 20:05:18 by alopez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRCS =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 		ft_strrchr.c ft_substr.c ft_tolower.c ft_toupper.c	ft_strjoin.c \
 		ft_strtrim.c ft_split.c	ft_itoa.c ft_strmapi.c ft_striteri.c \
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
+		ft_freeptr.c
 
 OBJS		= $(SRCS:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:34:56 by alopezb           #+#    #+#             */
-/*   Updated: 2021/09/06 20:43:55 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/09/09 19:56:20 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-#if DEBUG
-int main()
-{
-	printf("original: %s\n", strnstr("aaabcabcd", "aaabc", 5));
-	printf("funcion : %s\n", ft_strnstr("aaabcabcd", "aaabc", 5));
-}
-#endif

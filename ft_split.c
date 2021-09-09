@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 14:26:38 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/09/06 22:07:37 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/09/09 20:15:58 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static	int	stringcount(const char *s, char c)
 			i++;
 		while (s[i] == c && s[i + 1] == c)
 			i++;
-		while (s[i] == c && s[i + 1] != c && s[i +1] != '\0')
+		while (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
 		{
 			count++;
 			i++;
@@ -71,9 +71,8 @@ static int	stringposition(const char *s, char c)
 	return (i);
 }
 
-char	**ft_split(char const *s, char c)
+static void	makesplit(char **array, char const *s, char c)
 {
-	char	**array;
 	int		index;
 	int		sindex;
 	int		length;
@@ -83,18 +82,28 @@ char	**ft_split(char const *s, char c)
 	position = 0;
 	index = 0;
 	sindex = 0;
-	if (!s)
-		return (NULL);
-	array = ft_calloc(sizeof(char *), (stringcount(s, c) + 1));
-	if (!array)
-		return (NULL);
 	while (index < stringcount(s, c))
 	{
 		sindex = sindex + stringposition(&s[sindex], c);
 		length = stringlength(&s[sindex], c);
 		array[index] = ft_substr(s, sindex, length);
+		if (!array[index])
+			ft_freeptr(array);
 		sindex = sindex + length;
 		index++;
 	}
+	return ;
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**array;
+
+	if (!s)
+		return (NULL);
+	array = ft_calloc(sizeof(char *), (stringcount(s, c) + 1));
+	if (!array)
+		return (NULL);
+	makesplit(array, s, c);
 	return (array);
 }

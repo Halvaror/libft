@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 20:09:32 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/09/06 21:15:29 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/09/09 19:57:08 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char 	*str;
+	char	*str;
 	size_t	i;
 
 	i = 0;
@@ -34,5 +34,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	str[i] = '\0';
-	return(str);
+	return (str);
 }

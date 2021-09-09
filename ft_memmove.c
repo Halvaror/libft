@@ -6,13 +6,13 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 18:47:15 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/08/15 17:22:32 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/09/09 21:02:52 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	overflow(char *d, const char *s, int n)
+static char	overflow(char *d, const char *s, int n)
 {
 	int	i;
 

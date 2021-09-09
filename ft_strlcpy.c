@@ -28,5 +28,5 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	else if (size == 0)
 		dest = 0;
-	return(i);
+	return (i);
 }
